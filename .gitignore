@@ -1,0 +1,39 @@
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+coverage/
+*.tsbuildinfo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local databases and runtime files
+*.db
+*.sqlite
+*.sqlite3
+
+# Investigation data and backups — never commit real case data
+storage/evidence/
+storage/backups/
+
+# Temporary files
+.tmp/
+temp/
+.cache/
+
+# Operating system and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

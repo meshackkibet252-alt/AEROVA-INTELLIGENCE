@@ -1,0 +1,19 @@
+
+{
+  "name": "aivora-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AIVORA Intelligence — From Digital Clues to Clear Intelligence.",
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c blue,green \"npm run dev --workspace=@aivora/api\" \"npm run dev --workspace=@aivora/web\"",
+    "build": "npm run build --workspace=@aivora/shared && npm run build --workspace=@aivora/api && npm run build --workspace=@aivora/web"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
